@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>video introduce</title>
+    <link rel="stylesheet" href="../css/video introduce.css">
+    <link rel="stylesheet" type="text/css" href="../css/load.css">
+    <link rel="stylesheet" type="text/css" href="../css/roll.css">
+    <link rel="stylesheet" href="../css/Cursor.css">
+    
+</head>
+
+<body>
+    <section>
+        <div>
+            <video id="smallvideo" loop autoplay muted>
+                    <!--视频类型为视频和视频路径-->
+                <source type="audio/mp4" src="https://video.manamana.net/-jlZbOPR-scwWNcLP_i_iE8L7Sc=/lnim0NbYYfwbazkDB5IBmD_201LI"></source>
+            </video>
+        </div>       
+        <div class="text">
+            <h2>LED艺术装置 | 迷镜之森</h2>
+            <p>阳光像一缕缕金色的细沙，穿过层叠的枝叶，洒落在草地上，<br>从清晨到日暮，听自然之语，闻花草之馨。<br><br>
+            我们用LED结合镜面不锈钢，设计出层叠错落的立体空间，<br>打造出一片光影秘林，营造出沉浸的视觉感受，<br>伴着空灵的音乐与鸟鸣声，仿佛穿梭在充满自然气息的森林间。
+            </p>    
+        </div>
+        <span class="curve">
+            <img src="../images/curve.png" alt="">
+        </span>
+    </section>
+ 
+    <div class="loader"><h3>THE ART ECHO</h3></div>
+    <div class="container">
+
+          <div class="panel active choose" style="background-image: url('../images/002.jpg')">
+            <h3>扉花 Heaven Bloom</h3>
+          </div>
+          <div class="panel choose" style="background-image: url('../images/003.jpg')">
+            <h3>幻流</h3>
+          </div>
+          <div class="panel choose" style="background-image: url('../images/004.jpg')">
+            <h3>THE HUB</h3>
+          </div>
+          <div class="panel choose" style="background-image: url('../images/005.jpg')">
+            <h3>Digital Sauna</h3>
+          </div>
+          <div class="panel choose" style="background-image: url('../images/007.jpg')">
+            <h3>苏博西馆</h3>
+          </div>
+
+    </div>
+
+
+    <div class="loader">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+    </div>
+    <footer>
+        &copy; 2021.3 陈涌铨 黄华泰 欧阳健怡
+        <br>
+        素材来源：MANA官网
+    </footer>
+    <script src="../js/expanding-cards.js"></script>
+    <script>
+        var scroll = document.querySelector('.curve')
+        // 监听滚动事件
+        window.addEventListener('scroll', function () {
+            var value = 1 + (window.scrollY) / -700
+            // 垂直水平的缩放
+            scroll.style.transform = `scaleY(${value})`        
+        })
+    </script>
+</body>
+
+</html>

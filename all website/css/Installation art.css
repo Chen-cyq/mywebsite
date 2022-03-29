@@ -1,0 +1,288 @@
+html,
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    /*height: 400vh;*/
+    overflow-x: hidden;
+}
+a{
+  text-decoration: none;
+  color: #fff;
+  cursor: url("../images/SizeAll.cur"),auto;
+}
+
+.background {
+    background-image: url("../images/012.jpg");
+    /*background-repeat: repeat-y;*/
+    background-size: cover;
+    background-position: 50% 50%;/*定位dingw*/
+    height: 200vh;
+    font: 500 20rem '';
+   /* font-weight: 800px;*/
+    line-height: 130vh;
+    -webkit-background-clip: text;/*以图片为背景向外裁剪*//*文字区域外的将被裁剪*/
+    -webkit-text-fill-color: transparent;/*文字透明镂空*/
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+}
+
+/*伪元素，将背景放到后面*/
+.background::before {
+    content: '';
+    background-size: cover;
+    background-image: inherit;
+    background-position: 50% 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -99;
+}
+
+
+h1 {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    letter-spacing: 10px;
+    color: #fff;
+    margin-top: 50px;
+
+
+}
+
+h2 {
+    position: absolute;
+    letter-spacing: 2px;
+    top: 120vh;
+    width: 60%;
+    color: #fff;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 30px;
+    background-color: rgba(0, 0, 0, .3);
+
+}
+.tet{
+    height: 1000px;
+    width: 100vw;
+    background-color: royalblue;
+}
+
+
+.bbb{
+    display: flex;
+    justify-content: center;
+    background:rgb(236, 236, 236);
+
+}
+
+.wrap{
+    position: relative;
+    width: 1200px;
+    height: 262.5vh;
+}
+
+/*中间部分的线条*/
+.center::after{
+    content:'';
+    position: absolute;
+    left: 50%;
+    width: 5px; 
+    z-index:0;
+    height:390px;
+    background-color:grey;
+}
+
+.bbox{
+    padding-top: 40px;
+    position: relative;
+    width: 100%;
+    height: 350px;
+    display: flex;
+    /*设置间距*/
+    margin-bottom:25px;
+    justify-content: space-between;
+    transform: translateX(-100%);
+    transition: transform 0.5s ease-in-out;
+}
+
+
+.bbox:nth-of-type(even){
+    transform: translateX(100%);
+}
+
+.bbox.show{
+    transform: translateX(0);
+}
+.left,.right{
+    position: relative;
+    width: 500px;
+    height: 350px;
+}
+
+.center{
+    width: 10%;
+    display: flex;
+    /*文字居中表格显示*/
+    justify-content: center;
+    align-items: center;
+}
+.center span{
+    width: 120px;
+    border-radius: 10px;
+    text-align: center;
+    font: 900 24px '';
+    line-height: 50px;
+    background-color: white;
+    z-index: 2;
+}
+
+
+.box{
+    position: relative;
+    width:500px;
+    height: 350px;
+    display: block;
+    background-color: white;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.15);
+    /*x偏移量 y偏移量 阴影模糊半径 阴影扩散半径 阴影颜色*/
+    transition: 0.4s linear;  
+}
+.box .image{
+    background-color: black;
+    /*为了后续悬停动画配合opacity显示灰色遮罩*/
+    height: 280px;
+    overflow: hidden;
+    /*图片悬停放大超出边框的裁剪掉*/
+}
+
+.image img{
+    width: 100%;
+    height: 100%;
+    transition: 0.3s;
+}
+/*图片适应image大小并完全展示*/
+
+.box .content{
+     position: absolute;
+     bottom: 0px;
+     /*让content内的文字在boxleft框内*/     
+     width: 100%;
+     /*设定内容宽度*/
+     background-color: white;
+     text-align: center;
+     padding: 10px 30px;
+     /*上边距10 左边距30*/
+     box-sizing: border-box;
+    /*content与boxleft宽度相适应*/
+}
+
+.content .title{
+    padding-top: 10px;
+    font-size: 24px;
+    font-weight: 600;
+    color: #333333;
+    text-align: center;
+}
+
+.content .creater{
+    font-size: 18px;
+    font-weight: 500;
+    color: #808080;
+    margin-bottom: 10px;
+}
+.profile p{
+    color: #666666;
+    font-size: 16px;
+    line-height: 1.8em;
+    text-align: justify;
+    /*文本两边对齐*/
+}
+
+.profile button{
+    float: left;
+    padding: 7px 15px;
+    font-size: 17px;
+    background-color: royalblue;
+    color: white;
+    font-weight: 500;
+    border: none;
+    margin: 10px 170px;
+    /*鼠标图样变换*/
+    transition: 0.3s ease;
+}
+
+.profile{
+    display: none;
+}
+/*把profile部分隐藏掉*/
+
+
+
+
+/*动画部分*/
+.box:hover{
+    box-shadow: 0px 5px 35px 0px rgba(0, 0, 0, 0.3)
+}
+
+
+
+.profile p{
+    color: #666666;
+    font-size: 16px;
+    line-height: 1.5em;
+    text-align: justify;
+}
+
+.profile button:hover{
+    transform: scale(0.9);
+    background-color: #e64533;
+}
+
+
+.box.active:hover .image img{
+    opacity: 0.6;
+    /*透明度调整*/
+    transform: scale(1.1);
+    /*图片悬停放大*/
+}
+
+
+/*.bbox--expanded {
+  height: 100%;
+  width: 100%;
+  overflow-y: scroll;
+}
+.bbox--expanded .overlay {
+  opacity: 0.95;
+}
+.bbox--expanded .article-title {
+  color: white;
+  font-size: 64px;
+  letter-spacing: 0.05em;
+}
+.bbox--expanded .title-wrap {
+  transform: translateY(-300px);
+  color: white;
+}
+.bbox--expanded .bbox__cover-exerpt {
+  opacity: 0;
+}
+.bbox--expanded .bbox__cover {
+  height: 460px;
+  margin-bottom: 6rem;
+}
+.bbox--expanded .bbox__content {
+  opacity: 1;
+}
+.bbox--expanded .header-image {
+  height: 100%;
+}*/

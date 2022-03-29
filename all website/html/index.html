@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The Art Echo</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/Cursor.css">
+    <script type="text/javascript" src="../js/index.js"></script>
+</head>
+<body>
+  	<div class="area" id="area">
+  		<div class="bigbox"> 		
+		<!-- 最底层视频 -->
+		<video id="bigvideo" onmouseover="bigvideoPlayback()" onmouseout="bigvideoStopped()" muted>
+		    <source type="audio/mp4" src="https://video.manamana.net/-jlZbOPR-scwWNcLP_i_iE8L7Sc=/lkEbny_XyY78S-_pkOUL0R1QSZl4"></source>
+		</video>
+		</div>
+	    <!-- 中间层视频 -->
+	    <div class="middlebox" id="middlebox">
+	        <video id="middlevideo" poster="../images/video.png" onmouseover="middlevideoPlayback()" onmouseout="middlevideoStopped()" muted>
+	            <source type="audio/mp4" src="https://video.manamana.net/kTDGTynuca3nYjI8sxqG7cDdn8c=/lvh0VgEjcqdqP8VNPhdzN10opeFS"></source>
+	        </video>  
+		</div>
+		<!-- 顶层视频 -->
+		<a href="video introduce.html" target="_blank">
+		<div class="smallbox" id="smallbox">
+		    <video id="smallvideo" onmouseover="smallvideoPlayback()" onmouseout="smallvideoStopped()" muted>
+		            <!--视频类型为视频和视频路径-->
+		        <source type="audio/mp4" src="https://video.manamana.net/-jlZbOPR-scwWNcLP_i_iE8L7Sc=/lnim0NbYYfwbazkDB5IBmD_201LI"></source>
+		    </video>   
+		</div>
+		</a>
+		<image src = "../images/return2.png" id="return" onclick="siderback()"></image>
+		<image src = "../images/aside.png" id="aside" onclick="aside()"></image>
+		<section id="sider">
+				
+			<div>
+
+				<a href="Installation art.html" target="_blank"><h1>装置艺术</h1></a>
+				<a href="Interactive art.html" target="_blank"><h1>交互艺术</h1></a>
+				<a href="#"><h1>灯光艺术</h1></a>
+				<a href="#"><h1>公共艺术</h1></a>
+			</div>
+		</section>
+  	</div>
+</body>
+</html>

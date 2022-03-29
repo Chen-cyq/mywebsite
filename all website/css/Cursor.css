@@ -1,0 +1,9 @@
+body{
+	cursor: url("../images/Arrow.cur"),auto;
+}
+a{
+	cursor: url("../images/SizeAll.cur"),auto;
+}
+.choose{
+	cursor: url("../images/SizeAll.cur"),auto;
+}
