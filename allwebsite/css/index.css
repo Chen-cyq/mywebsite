@@ -8,6 +8,9 @@ a{
   text-decoration: none;
   flex: 1;
 }
+body{
+  overflow: hidden;
+}
 /*侧边栏*/
 section{
   width: 88%;
